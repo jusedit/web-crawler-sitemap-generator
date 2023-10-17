@@ -92,6 +92,8 @@ start_url = input("Enter the starting URL: ")
 
 # Create the sitemap XML root element
 sitemap_root = ET.Element("urlset")
+sitemap_namespace = "http://www.sitemaps.org/schemas/sitemap/0.9"  # Replace with the desired namespace
+sitemap_root = ET.Element("urlset", xmlns=sitemap_namespace)
 
 # Start crawling
 depth = 10
